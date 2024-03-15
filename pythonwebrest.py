@@ -1,11 +1,9 @@
-from flask import Flask, jsonify
-
+from flask import Flask
 app = Flask(__name__)
-books = [{'id': 1, 'title': 'Python Essentials', 'author': 'Jane Doe'}]
 
-@app.route('/books', methods=['GET'])
-def get_books():
-    return jsonify({'books': books})
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
